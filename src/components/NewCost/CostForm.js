@@ -1,8 +1,24 @@
+import { useState } from "react";
 import "./CostForm.css";
 
 const CostForm = () => {
+
+    const [name, setName] = useState('');
+
     const nameChangeHandler = (event) => {
-        console.log(event.target.value)
+       setName(event.target.value);
+    };
+
+    const [amount, setAmount] = useState('');
+
+    const amountChangeHandler = (event) => {
+       setAmount(event.target.value);
+    };
+
+    const [date, setDate] = useState('');
+
+    const dateChangeHandler = (event) => {
+       setDate(event.target.value);
     };
 
     return (
@@ -21,6 +37,7 @@ const CostForm = () => {
                         type='number'
                         min='0.01' 
                         step='0.01'
+                        onChange={amountChangeHandler}
                     />
                 </div>
                 <div className="new-cost__control">
@@ -29,6 +46,7 @@ const CostForm = () => {
                         type='date' 
                         min='2023-01-01' 
                         step='2100-12-31'
+                        onChange={dateChangeHandler}
                     />
                 </div>
                 <div className="new-cost__actions">
