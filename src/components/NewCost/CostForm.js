@@ -1,7 +1,6 @@
 import "./CostForm.css";
 
 const CostForm = () => {
-
     const nameChangeHandler = (event) => {
         console.log(event.target.value)
     };
