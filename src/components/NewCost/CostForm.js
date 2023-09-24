@@ -10,7 +10,8 @@ const CostForm = () => {
             date: ''
         }
     );
-
+    
+    // BAD EXAMPLE (data expired)
     const nameChangeHandler = (event) => {
         setUserInput(
             ...userInput,
@@ -31,6 +32,19 @@ const CostForm = () => {
             date: event.target.value            
         );
     };
+    // GOOD EXAMPLE (data newest)
+    const nameChangeHandler = (event) => {
+        setUserInput(
+            (previousState) => {
+                return {
+                    ...previousState,
+                    name: event.target.value
+                }
+            }
+        );
+    };
+
+    ...
         
     */
     const [name, setName] = useState('');
