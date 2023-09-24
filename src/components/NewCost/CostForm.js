@@ -47,24 +47,40 @@ const CostForm = () => {
     ...
         
     */
-    const [name, setName] = useState('');
-    const [amount, setAmount] = useState('');
-    const [date, setDate] = useState('');
+    const [inputName, setInputName] = useState('');
+    const [inputAmount, setInputAmount] = useState('');
+    const [inputDate, setInputDate] = useState('');
 
     const nameChangeHandler = (event) => {
-        setName(event.target.value);
+        setInputName(event.target.value);
     };
 
     const amountChangeHandler = (event) => {
-        setAmount(event.target.value);
+        setInputAmount(event.target.value);
     };
 
     const dateChangeHandler = (event) => {
-        setDate(event.target.value);
+        setInputDate(event.target.value);
+    };
+
+    // formSubmit
+
+    const submitHandler = (event) => {
+        event.preventDefault();
+        
+        const costData = {
+            name: inputName,
+            amount: inputAmount,
+            date: new Date(inputDate)
+        };
+
+        
     };
 
     return (
-        <form>
+        <form
+            onSubmit={submitHandler}
+        >
             <div className="new-cost__controls">
                 <div className="new-cost__control">
                     <label>Название</label>
@@ -95,7 +111,9 @@ const CostForm = () => {
                     <button type='submit'>
                         Добавить расход
                     </button>
-                    <button type='submit'>
+                    <button 
+                        type='submit'
+                    >
                         Отмена
                     </button>
                 </div>
