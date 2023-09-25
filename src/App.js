@@ -20,14 +20,14 @@ const App = () => {
     },
   ];
 
-  const AddNewCostHandler = (cost) => {
+  const addNewCostHandler = (cost) => {
     console.log(cost);
   };
 
   return (
     <div className="lol">
       <NewCost 
-        OnAddNewCost={AddNewCostHandler}
+        onAddNewCost={addNewCostHandler}
       />
       <Costs costs={costs} />
     </div>
