@@ -3,7 +3,7 @@ name: Deploy to GitHub Pages
 on:
   push:
     branches:
-      - main # Здесь укажите ветку, на которой должен происходить деплой
+      - main
 
 jobs:
   deploy:
@@ -16,13 +16,13 @@ jobs:
       - name: Setup Node.js
         uses: actions/setup-node@v2
         with:
-          node-version: 16 # Укажите версию Node.js, которую используете
+          node-version: 16
 
       - name: Install Dependencies
         run: npm install
 
       - name: Build
-        run: npm run build # Здесь укажите команду для сборки вашего React-приложения
+        run: npm run build
 
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
