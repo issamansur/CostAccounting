@@ -23,7 +23,8 @@ const Costs = (props) => {
                 
                 {props.costs.map(
                     (cost) => (
-                        <CostItem 
+                        <CostItem
+                            key={cost.id}
                             description={cost.description}
                             amount={cost.amount}
                             date={cost.date}
