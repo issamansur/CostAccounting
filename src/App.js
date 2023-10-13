@@ -4,7 +4,7 @@ import NewCost from "./components/NewCost/NewCost";
 
 const INIT_COSTS = [
   {
-    date: new Date(),
+    date: new Date("01.01.2022"),
     description: 'Холодильник',
     amount: 999.99,
   },
@@ -32,7 +32,7 @@ const App = () => {
   };
 
   return (
-    <div className="lol">
+    <div className="main">
       <NewCost 
         onAddNewCost={addNewCostHandler}
       />

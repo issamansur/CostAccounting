@@ -2,51 +2,6 @@ import { useState } from "react";
 import "./CostForm.css";
 
 const CostForm = (props) => {
-    /*
-    const [userInput, setUserInput] =  useState(
-        {
-            name: '',
-            amount: '',
-            date: ''
-        }
-    );
-    
-    // BAD EXAMPLE (data expired)
-    const nameChangeHandler = (event) => {
-        setUserInput(
-            ...userInput,
-            name: event.target.value
-        );
-    };
-
-    const amountChangeHandler = (event) => {
-        setUserInput(
-            ...userInput,
-            amount: event.target.value
-        );
-    };
-
-    const dateChangeHandler = (event) => {
-        setUserInput(
-            ...userInput,
-            date: event.target.value            
-        );
-    };
-    // GOOD EXAMPLE (data newest)
-    const nameChangeHandler = (event) => {
-        setUserInput(
-            (previousState) => {
-                return {
-                    ...previousState,
-                    name: event.target.value
-                }
-            }
-        );
-    };
-
-    ...
-        
-    */
     const [inputName, setInputName] = useState('');
     const [inputAmount, setInputAmount] = useState('');
     const [inputDate, setInputDate] = useState('');
@@ -64,7 +19,6 @@ const CostForm = (props) => {
     };
 
     // formSubmit
-
     const submitHandler = (event) => {
         event.preventDefault();
         
@@ -118,14 +72,11 @@ const CostForm = (props) => {
                     <button type='submit'>
                         Добавить расход
                     </button>
-                    <button 
-                        type='submit'
-                    >
+                    <button type='submit' onClick={props.onCancel}>
                         Отмена
                     </button>
                 </div>
             </div>
-        
         </form>
     );
 }

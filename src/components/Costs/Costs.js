@@ -7,7 +7,7 @@ import CostList from "./CostList";
 import Card from "../UI/Card";
 
 const Costs = (props) => {
-    const [selectedYear, setSelectedYear] = useState('2020');
+    const [selectedYear, setSelectedYear] = useState('2023');
 
     const changeYearHandler = (year) => {
         setSelectedYear(year);
