@@ -1,10 +1,10 @@
 {
   "files": {
-    "main.css": "/practiceReact/static/css/main.40a4167d.css",
-    "main.js": "/practiceReact/static/js/main.38329b4f.js",
-    "index.html": "/practiceReact/index.html",
-    "main.40a4167d.css.map": "/practiceReact/static/css/main.40a4167d.css.map",
-    "main.38329b4f.js.map": "/practiceReact/static/js/main.38329b4f.js.map"
+    "main.css": "/CostAccounting/static/css/main.40a4167d.css",
+    "main.js": "/CostAccounting/static/js/main.38329b4f.js",
+    "index.html": "/CostAccounting/index.html",
+    "main.40a4167d.css.map": "/CostAccounting/static/css/main.40a4167d.css.map",
+    "main.38329b4f.js.map": "/CostAccounting/static/js/main.38329b4f.js.map"
   },
   "entrypoints": [
     "static/css/main.40a4167d.css",
